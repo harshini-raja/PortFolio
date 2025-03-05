@@ -1,0 +1,58 @@
+/* About Me Section */
+.about-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: #fff;
+  position: relative;
+}
+
+/* About Me Container */
+.about-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Laptop Frame Styling */
+.laptop-frame {
+  position: relative;
+  display: inline-block;
+  width: 807px; /* Adjust size */
+}
+
+.laptop-image {
+  width: 100%;
+  display: block;
+}
+
+/* Profile Photo Styling (Hidden Initially) */
+
+.profile-photo {
+  position: absolute;
+  top: 19%;
+  left: 24.3%;
+  right: inherit;
+  bottom: inherit;
+  width: 80%;
+  height: 95%;
+  object-fit: cover; /* Changed from contain to cover */
+  border-radius: 5px;
+  opacity: 0;
+  width: 400px;
+  height: 500px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Hover Effect - Show Photo */
+.profile-photo.visible {
+  opacity: 1;
+}
+
+/* Stylus (iPad Pen) */
+.stylus {
+  position: absolute;
+  width: 300px; /* Adjust pen size */
+  height: auto;
+  pointer-events: none; /* Ensures it doesn’t block interactions */
+  transition: transform 0.1s ease-in-out;
+}
