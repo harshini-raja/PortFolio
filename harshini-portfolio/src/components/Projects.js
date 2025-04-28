@@ -5,7 +5,7 @@ import FRS from "../assets/img/FRS.png";
 import Facebook from "../assets/img/FSSentiment.png";
 import dev from "../assets/img/dev-docs-search.png";
 import AWS from "../assets/img/ai-resume-scanner.svg";
-import mermaid from "../assets/img/mermaid.mov";
+import mermaid from "../assets/img/mermaid.gif";
 
 // Import tech icons
 import androidIcon from "../assets/img/android.png";
