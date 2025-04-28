@@ -1,0 +1,205 @@
+.contact-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #4e7aff 0%, #2b3c7e 50%, #431c5d 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add cosmic star effect */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Small stars */ radial-gradient(
+      1px 1px at 15px 25px,
+      #ffffff,
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(1px 1px at 85px 45px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 120px 90px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 200px 30px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 250px 120px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 300px 60px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 350px 150px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 400px 80px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 450px 200px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 500px 100px, #ffffff, rgba(0, 0, 0, 0)),
+    /* Medium stars */
+      radial-gradient(2px 2px at 50px 150px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 150px 200px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 250px 250px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 350px 300px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 450px 350px, #ffffff, rgba(0, 0, 0, 0)),
+    /* Large stars */
+      radial-gradient(3px 3px at 100px 300px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(3px 3px at 300px 400px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(3px 3px at 500px 500px, #ffffff, rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  animation: stars 8s linear infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@keyframes stars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-600px);
+  }
+}
+
+.contact-section h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #ffffff, #e1a5c3, #ffffff, #9f70ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: inline-block;
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 32px 0 rgba(78, 122, 255, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(78, 122, 255, 0.5);
+  box-shadow: 0 0 15px rgba(78, 122, 255, 0.3);
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px 0;
+  background: rgba(78, 122, 255, 0.2);
+  border: 1px solid rgba(78, 122, 255, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: rgba(78, 122, 255, 0.3);
+  box-shadow: 0 0 20px rgba(78, 122, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-container {
+    max-width: 90%;
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .contact-container {
+    max-width: 95%;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submit-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 30px 10px;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .submit-btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}

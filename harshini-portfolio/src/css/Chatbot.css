@@ -1,0 +1,140 @@
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: "Centra", sans-serif;
+}
+
+.chatbot {
+  width: 320px;
+  background: rgba(31, 31, 47, 0.95);
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.chat-header {
+  padding: 15px;
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.chat-header:hover {
+  background: linear-gradient(90.21deg, #4a2fbd -5.91%, #aa367c 111.58%);
+}
+
+.chat-body {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.message.bot {
+  justify-content: flex-start;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.message.bot .message-bubble {
+  background: rgba(74, 47, 189, 0.6);
+  border-bottom-left-radius: 5px;
+}
+
+.message.user .message-bubble {
+  background: rgba(170, 54, 124, 0.6);
+  border-bottom-right-radius: 5px;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background: rgba(41, 43, 62, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-right: 8px;
+  font-size: 0.9rem;
+}
+
+.chat-input input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chat-input input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.chat-input button {
+  padding: 8px 20px;
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: linear-gradient(90.21deg, #4a2fbd -5.91%, #aa367c 111.58%);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .chatbot {
+    width: 300px;
+  }
+
+  .chat-body {
+    height: 350px;
+  }
+}

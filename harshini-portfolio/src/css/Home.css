@@ -1,0 +1,87 @@
+/* Home/Banner Section */
+.home-section {
+  padding: 80px 20px;
+  position: relative;
+  background: linear-gradient(135deg, #4e7aff 0%, #2b3c7e 50%, #431c5d 100%);
+  color: #fff;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .home-section {
+    padding: 60px 20px;
+  }
+
+  .home-content {
+    max-width: 90%;
+  }
+
+  .home-title {
+    font-size: 48px;
+  }
+
+  .home-subtitle {
+    font-size: 24px;
+  }
+
+  .home-description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    padding: 40px 15px;
+  }
+
+  .home-content {
+    max-width: 95%;
+    text-align: center;
+  }
+
+  .home-title {
+    font-size: 36px;
+  }
+
+  .home-subtitle {
+    font-size: 20px;
+  }
+
+  .home-description {
+    font-size: 16px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-section {
+    padding: 30px 10px;
+  }
+
+  .home-title {
+    font-size: 28px;
+  }
+
+  .home-subtitle {
+    font-size: 18px;
+  }
+
+  .home-description {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

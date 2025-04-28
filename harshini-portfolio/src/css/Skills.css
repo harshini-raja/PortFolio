@@ -1,0 +1,541 @@
+/* Skill Section */
+.skill {
+  position: relative;
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #4e7aff 0%, #2b3c7e 50%, #431c5d 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.skill-bx {
+  padding: 60px 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.skill h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #ffffff, #e1a5c3, #ffffff, #9f70ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: inline-block;
+}
+
+.skill h2::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff69b4, #ffffff);
+  bottom: -10px;
+  left: 25%;
+  border-radius: 10px;
+}
+
+/* iPad Frame Container */
+.ipad-container {
+  position: relative;
+  width: 1024px;
+  height: 768px;
+  margin: 40px auto;
+  background: #1a1a1a;
+  border-radius: 40px;
+  padding: 20px 20px 70px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 50px rgba(78, 122, 255, 0.2);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Device Notch */
+.device-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 25px;
+  background: #1a1a1a;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.camera-dot {
+  width: 12px;
+  height: 12px;
+  background: #2a2a2a;
+  border-radius: 50%;
+  box-shadow: inset 0 0 2px #000;
+}
+
+/* iPad Screen */
+.ipad-screen {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 20px);
+  background: rgba(13, 17, 38, 0.95);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(183, 110, 121, 0.3);
+  box-shadow: inset 0 0 20px rgba(183, 110, 121, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.ipad-screen h2 {
+  font-size: 32px;
+  color: #ff69b4;
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Screen Content */
+.screen-content {
+  display: flex;
+  width: 400%;
+  height: calc(100% - 80px); /* Reduced height to make room for navigation */
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-screen {
+  width: 25%;
+  height: 100%;
+  padding: 20px 40px;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.screen-title {
+  font-size: 24px;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.skill-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 20px;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* App Grid */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 20px;
+  margin: auto;
+}
+
+/* App Icon Style */
+.app-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: appearWithBounce 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.app-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.app-icon img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+
+.app-name {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #d0d0d0;
+  white-space: nowrap;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+
+/* Navigation Container */
+.navigation-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 10;
+  /* /background: rgba(20, 24, 46, 0.8); */
+  backdrop-filter: blur(8px);
+  padding: 12px 25px;
+  /* border-radius: 16px; */
+  width: fit-content;
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgb(245, 147, 242);
+  border: 1px solid rgb(251, 141, 226);
+  color: #d0d0d0;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.nav-btn.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.03);
+  color: #808080;
+}
+
+.screen-dots {
+  display: flex;
+  gap: 8px;
+  padding: 0 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dot.active {
+  background: #e0e0e0;
+  transform: scale(1.2);
+}
+
+/* Home Button */
+.home-button {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(20, 24, 46, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-button::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+/* Add rose gold border effect */
+.ipad-container::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    135deg,
+    #dfc2c0 0%,
+    #b76e79 25%,
+    #c88f94 50%,
+    #dfc2c0 75%,
+    #b76e79 100%
+  );
+  border-radius: 42px;
+  z-index: -1;
+  transform: translateZ(-1px);
+  opacity: 0.9;
+}
+
+/* Add rotating rectangle effect */
+.ipad-container::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(
+    45deg,
+    #dfc2c0 0%,
+    #b76e79 25%,
+    #c88f94 50%,
+    #dfc2c0 75%,
+    #b76e79 100%
+  );
+  border-radius: 44px;
+  z-index: -2;
+  filter: blur(4px);
+  opacity: 0.5;
+  animation: shimmer 6s linear infinite;
+}
+
+/* Animation for app icons appearing */
+@keyframes appearWithBounce {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Add shimmer animation */
+@keyframes shimmer {
+  0% {
+    opacity: 0.3;
+    transform: translateZ(-2px) rotate(0deg);
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateZ(-2px) rotate(180deg);
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateZ(-2px) rotate(360deg);
+  }
+}
+
+/* Stagger the animation for each icon */
+.app-icon:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.app-icon:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.app-icon:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.app-icon:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.app-icon:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.app-icon:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Add cosmic star effect */
+.skill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Small stars */ radial-gradient(
+      1px 1px at 15px 25px,
+      #ffffff,
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(1px 1px at 85px 45px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 120px 90px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 200px 30px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 250px 120px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 300px 60px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 350px 150px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 400px 80px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 450px 200px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 500px 100px, #ffffff, rgba(0, 0, 0, 0)),
+    /* Medium stars */
+      radial-gradient(2px 2px at 50px 150px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 150px 200px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 250px 250px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 350px 300px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 450px 350px, #ffffff, rgba(0, 0, 0, 0)),
+    /* Large stars */
+      radial-gradient(3px 3px at 100px 300px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(3px 3px at 300px 400px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(3px 3px at 500px 500px, #ffffff, rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  animation: stars 8s linear infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@keyframes stars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-600px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .ipad-container {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+
+  .app-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+  }
+
+  .app-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .app-icon img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 80px 20px;
+  position: relative;
+  background: linear-gradient(135deg, #4e7aff 0%, #2b3c7e 50%, #431c5d 100%);
+  color: #fff;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .skills-section {
+    padding: 60px 20px;
+  }
+
+  .skills-container {
+    gap: 30px;
+  }
+
+  .skill-card {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skill-icon {
+    font-size: 40px;
+  }
+
+  .skill-name {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 40px 15px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .skill-card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skill-icon {
+    font-size: 30px;
+  }
+
+  .skill-name {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 30px 10px;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .skill-card {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skill-icon {
+    font-size: 25px;
+  }
+
+  .skill-name {
+    font-size: 14px;
+  }
+}

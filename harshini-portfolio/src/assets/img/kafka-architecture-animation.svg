@@ -1,0 +1,213 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Base styles */
+    text {
+      font-family: Arial, sans-serif;
+    }
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .subtitle {
+      font-size: 16px;
+    }
+    .label {
+      font-size: 14px;
+    }
+    .small-text {
+      font-size: 12px;
+    }
+    
+    /* Animation keyframes */
+    @keyframes moveRight {
+      0% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(180px); opacity: 0; }
+    }
+    
+    @keyframes moveLeft {
+      0% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(-180px); opacity: 0; }
+    }
+    
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    @keyframes pulse {
+      0% { opacity: 0.7; }
+      50% { opacity: 1; }
+      100% { opacity: 0.7; }
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .message-to-topic-a {
+      animation: moveRight 2s infinite;
+    }
+    
+    .message-to-topic-b {
+      animation: moveRight 2.5s infinite;
+    }
+    
+    .message-to-topic-c {
+      animation: moveRight 3s infinite;
+    }
+    
+    .message-from-broker {
+      animation: moveLeft 2s infinite;
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    .spin {
+      animation: spin 6s linear infinite;
+      transform-origin: center;
+    }
+    
+    /* For staggered animations */
+    .delay-1 {
+      animation-delay: 0.7s;
+    }
+    
+    .delay-2 {
+      animation-delay: 1.4s;
+    }
+    
+    /* For topic partitions */
+    .partition-pulse-1 {
+      animation: pulse 3s infinite;
+      animation-delay: 0.5s;
+    }
+    
+    .partition-pulse-2 {
+      animation: pulse 3s infinite;
+      animation-delay: 1.5s;
+    }
+    
+    .partition-pulse-3 {
+      animation: pulse 3s infinite;
+      animation-delay: 2.5s;
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f0f0f0" rx="10" ry="10" />
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="title" fill="#2c3e50">Producer-Broker-Consumer Flow</text>
+  
+  <!-- Kafka Cluster Background -->
+  <rect x="270" y="70" width="260" height="380" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2" rx="10" ry="10" />
+  <text x="400" y="95" text-anchor="middle" class="label" fill="#34495e">Kafka Cluster</text>
+  
+  <!-- Multiple Topics -->
+  <rect x="290" y="110" width="220" height="40" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" rx="5" ry="5" class="pulse" />
+  <text x="400" y="135" text-anchor="middle" class="label" fill="white">Topic-A</text>
+  
+  <rect x="290" y="160" width="220" height="40" fill="#1abc9c" stroke="#16a085" stroke-width="2" rx="5" ry="5" class="pulse delay-1" />
+  <text x="400" y="185" text-anchor="middle" class="label" fill="white">Topic-B</text>
+  
+  <rect x="290" y="210" width="220" height="40" fill="#e67e22" stroke="#d35400" stroke-width="2" rx="5" ry="5" class="pulse delay-2" />
+  <text x="400" y="235" text-anchor="middle" class="label" fill="white">Topic-C</text>
+  
+  <!-- Broker -->
+  <rect x="300" y="260" width="200" height="150" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5" ry="5" opacity="0.9" />
+  <text x="400" y="285" text-anchor="middle" class="label" fill="white">Kafka Broker</text>
+  
+  <!-- Topic Partitions for Topic A -->
+  <rect x="320" y="300" width="160" height="25" fill="#e74c3c" stroke="#c0392b" stroke-width="1" rx="5" ry="5" class="partition-pulse-1" />
+  <text x="340" y="317" text-anchor="start" class="small-text" fill="white">Topic-A / Partition 0</text>
+  
+  <rect x="320" y="330" width="160" height="25" fill="#1abc9c" stroke="#16a085" stroke-width="1" rx="5" ry="5" class="partition-pulse-2" />
+  <text x="340" y="347" text-anchor="start" class="small-text" fill="white">Topic-B / Partition 0</text>
+  
+  <rect x="320" y="360" width="160" height="25" fill="#e67e22" stroke="#d35400" stroke-width="1" rx="5" ry="5" class="partition-pulse-3" />
+  <text x="340" y="377" text-anchor="start" class="small-text" fill="white">Topic-C / Partition 0</text>
+  
+  <!-- ZooKeeper -->
+  <circle cx="400" cy="435" r="15" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" class="spin" />
+  <text x="400" y="440" text-anchor="middle" class="small-text" fill="white">ZooKeeper</text>
+  
+  <!-- Producers -->
+  <rect x="60" y="110" width="120" height="60" fill="#2ecc71" stroke="#27ae60" stroke-width="2" rx="10" ry="10" />
+  <text x="120" y="140" text-anchor="middle" class="small-text" fill="white">Producer A</text>
+  <text x="120" y="155" text-anchor="middle" class="small-text" fill="white">(Topic A)</text>
+  
+  <rect x="60" y="180" width="120" height="60" fill="#2ecc71" stroke="#27ae60" stroke-width="2" rx="10" ry="10" />
+  <text x="120" y="210" text-anchor="middle" class="small-text" fill="white">Producer B</text>
+  <text x="120" y="225" text-anchor="middle" class="small-text" fill="white">(Topic B)</text>
+  
+  <rect x="60" y="250" width="120" height="60" fill="#2ecc71" stroke="#27ae60" stroke-width="2" rx="10" ry="10" />
+  <text x="120" y="280" text-anchor="middle" class="small-text" fill="white">Producer C</text>
+  <text x="120" y="295" text-anchor="middle" class="small-text" fill="white">(Topic C)</text>
+  
+  <!-- Consumers -->
+  <rect x="620" y="110" width="120" height="60" fill="#f39c12" stroke="#d35400" stroke-width="2" rx="10" ry="10" />
+  <text x="680" y="135" text-anchor="middle" class="small-text" fill="white">Consumer 1</text>
+  <text x="680" y="150" text-anchor="middle" class="small-text" fill="white">Topic A, Group A</text>
+  
+  <rect x="620" y="180" width="120" height="60" fill="#f39c12" stroke="#d35400" stroke-width="2" rx="10" ry="10" />
+  <text x="680" y="205" text-anchor="middle" class="small-text" fill="white">Consumer 2</text>
+  <text x="680" y="220" text-anchor="middle" class="small-text" fill="white">Topic B, Group B</text>
+  
+  <rect x="620" y="250" width="120" height="60" fill="#f39c12" stroke="#d35400" stroke-width="2" rx="10" ry="10" />
+  <text x="680" y="275" text-anchor="middle" class="small-text" fill="white">Consumer 3</text>
+  <text x="680" y="290" text-anchor="middle" class="small-text" fill="white">Topic A, Group A</text>
+  
+  <rect x="620" y="320" width="120" height="60" fill="#f39c12" stroke="#d35400" stroke-width="2" rx="10" ry="10" />
+  <text x="680" y="345" text-anchor="middle" class="small-text" fill="white">Consumer 4</text>
+  <text x="680" y="360" text-anchor="middle" class="small-text" fill="white">Topic C, Group C</text>
+  
+  <!-- Messages from Producers to Topics -->
+  <circle cx="190" cy="130" r="8" fill="#9b59b6" class="message-to-topic-a" />
+  <circle cx="190" cy="200" r="8" fill="#1abc9c" class="message-to-topic-b" />
+  <circle cx="190" cy="270" r="8" fill="#e67e22" class="message-to-topic-c" />
+  
+  <line x1="180" y1="130" x2="290" y2="130" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="280,130 290,125 290,135" fill="#2c3e50" />
+  
+  <line x1="180" y1="200" x2="290" y2="180" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="280,180 290,175 290,185" fill="#2c3e50" />
+  
+  <line x1="180" y1="270" x2="290" y2="230" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="280,230 290,225 290,235" fill="#2c3e50" />
+  
+  <!-- Messages from Topics to Broker -->
+  <line x1="400" y1="150" x2="400" y2="260" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="400,250 395,260 405,260" fill="#2c3e50" />
+  
+  <line x1="410" y1="200" x2="410" y2="260" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="410,250 405,260 415,260" fill="#2c3e50" />
+  
+  <line x1="390" y1="250" x2="390" y2="260" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="390,250 385,260 395,260" fill="#2c3e50" />
+  
+  <!-- Messages from Broker to Consumers -->
+  <circle cx="600" cy="130" r="8" fill="#9b59b6" class="message-from-broker" />
+  <circle cx="600" cy="200" r="8" fill="#1abc9c" class="message-from-broker delay-1" />
+  <circle cx="600" cy="270" r="8" fill="#9b59b6" class="message-from-broker delay-2" />
+  <circle cx="600" cy="340" r="8" fill="#e67e22" class="message-from-broker" />
+  
+  <line x1="500" y1="130" x2="620" y2="130" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="610,130 620,125 620,135" fill="#2c3e50" />
+  
+  <line x1="500" y1="200" x2="620" y2="200" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="610,200 620,195 620,205" fill="#2c3e50" />
+  
+  <line x1="500" y1="270" x2="620" y2="270" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="610,270 620,265 620,275" fill="#2c3e50" />
+  
+  <line x1="500" y1="340" x2="620" y2="340" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="610,340 620,335 620,345" fill="#2c3e50" />
+  
+  <!-- Topic Distribution Legend -->
+  <rect x="60" y="430" width="680" height="50" fill="white" stroke="#bdc3c7" stroke-width="1" rx="5" ry="5" />
+  <text x="400" y="450" text-anchor="middle" class="small-text" fill="#2c3e50">Multiple topics are managed by the broker and distributed to different consumer groups</text>
+  <text x="400" y="470" text-anchor="middle" class="small-text" fill="#2c3e50">Each consumer group can subscribe to one or more topics</text>
+</svg>
