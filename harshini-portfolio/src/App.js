@@ -20,6 +20,10 @@ function App() {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
+    document.title = "Harshini's Portfolio";
+  }, []);
+
+  useEffect(() => {
     const cursor = document.querySelector(".custom-cursor");
     let lastTime = performance.now();
     let lastX = 0;

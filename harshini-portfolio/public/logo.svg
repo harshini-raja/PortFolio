@@ -1,0 +1,27 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .big-hr {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 320px;
+      font-weight: normal;
+      fill: black;
+    }
+    .small-name {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      fill: black;
+      letter-spacing: 6px;
+    }
+  </style>
+
+  <!-- Big H -->
+  <text x="50" y="300" class="big-hr">H</text>
+
+  <!-- Big R overlapping -->
+  <text x="300" y="360" class="big-hr">R</text>
+
+  <!-- Name stacked vertically -->
+  <text x="550" y="180" class="small-name">HARSHINI</text>
+  <text x="550" y="240" class="small-name">RAJA</text>
+</svg>
