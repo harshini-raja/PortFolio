@@ -5,6 +5,7 @@ import FRS from "../assets/img/FRS.png";
 import Facebook from "../assets/img/FSSentiment.png";
 import dev from "../assets/img/dev-docs-search.png";
 import AWS from "../assets/img/ai-resume-scanner.svg";
+import mermaid from "../assets/img/mermaid.mov";
 
 // Import tech icons
 import androidIcon from "../assets/img/android.png";
@@ -229,8 +230,8 @@ export const Projects = () => {
       title: "Bilingual Math for Elementary School Kids",
       type: "MOBILE APP",
       description:
-        "A community platform designed exclusively for students at my college (MBCET). It enables users to find friend matches based on shared interests, create and join projects, and engage in collaborative chats and topic-based community groups.",
-      image: AWS,
+        "Developed a cross-platform mobile app using Flutter, Firebase, and Figma to teach elementary students math interactively through a bilingual, gamified experience. Integrated AI-powered voice feedback with Flutter TTS for real-time multilingual audio instructions, enhancing accessibility and engagement. Leveraged Firebase Authentication, Firestore, and Realtime Database to manage user sessions, track progress.",
+      image: mermaid,
       tech: ["Flutter", "Dart", "Firebase", "Figma", "Android Studio"],
       link: "https://github.com/hraja5/Counting_and_Sequencing/tree/analytics_version1",
     },
